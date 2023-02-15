@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useApi } from "../hooks/use-api";
 import { MovieDetails } from "../interfaces/movie-details";
+import { getImagePath } from "../utils";
 
-const IMAGE_PATH = import.meta.env.VITE_IMAGE_PATH;
+const IMAGE_PATH = getImagePath();
 
 export const MovieDetail = () => {
   const [movie, setMovie] = useState<MovieDetails>();

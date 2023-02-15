@@ -1,8 +1,9 @@
 import { Empty, Image, List, Space } from "antd";
 import { Link } from "react-router-dom";
 import { Movie } from "../interfaces/movie";
+import { getImagePath } from "../utils";
 
-const IMAGE_PATH = import.meta.env.VITE_IMAGE_PATH;
+const IMAGE_PATH = getImagePath();
 
 interface MovieListItemProps {
   movie: Movie;
