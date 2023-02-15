@@ -2,7 +2,7 @@ import { Empty, Image, List, Space } from "antd";
 import { Link } from "react-router-dom";
 import { Movie } from "../interfaces/movie";
 
-const IMAGE_PATH = "https://image.tmdb.org/t/p/w500";
+const IMAGE_PATH = import.meta.env.VITE_IMAGE_PATH;
 
 interface MovieListItemProps {
   movie: Movie;
