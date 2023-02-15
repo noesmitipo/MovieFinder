@@ -7,11 +7,12 @@ import { MovieDetails } from "../interfaces/movie-details";
 const IMAGE_PATH = import.meta.env.VITE_IMAGE_PATH;
 
 export const MovieDetail = () => {
-  const params = useParams();
-  const id = params.movieId;
-  const api = useApi();
   const [movie, setMovie] = useState<MovieDetails>();
   const [error, setError] = useState(false);
+  const api = useApi();
+
+  const params = useParams();
+  const id = params.movieId;
 
   useEffect(() => {
     if (id === undefined) {
