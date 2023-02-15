@@ -1,8 +1,8 @@
 import { Movie } from "../interfaces/movie";
 import { MovieDetails } from "../interfaces/movie-details";
 
-const API_KEY = "1c4457b0a6353ca22595aa8a79c73bd8";
-const API_URL = "https://api.themoviedb.org/3/";
+const API_KEY = import.meta.env.VITE_API_KEY;
+const API_URL = import.meta.env.VITE_API_URL;
 
 interface SearchMoviesResponse {
   page: number;
