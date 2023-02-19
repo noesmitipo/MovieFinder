@@ -28,7 +28,6 @@ export const useApi = () => {
 
   const getMovieDetails = async (id: string): Promise<MovieDetails> => {
     const response = await fetch(`${API_URL}movie/${id}?api_key=${API_KEY}`);
-    console.log(response);
     if (!response.ok) {
       throw Error("Movie not found");
     }
